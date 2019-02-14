@@ -2,40 +2,41 @@
 Gazorp malware
 https://research.checkpoint.com/the-gazorp-dark-web-azorult-builder/
 <br>
-== Install the needed packages ==
-- if httpd is installed already
-sudo service httpd stop
 
-sudo yum erase httpd httpd-tools apr apr-util
+# Install the needed packages
+if httpd is installed already
+```
+# sudo service httpd stop
+# sudo yum erase httpd httpd-tools apr apr-util
 
+# sudo yum install httpd
+# sudo yum install mysql mysql-server
+# sudo yum install php56w php56w-xml php56w-xmlrpc php56w-soap php56w-gd
 
+# sudo yum install php56w-mysqlnd 
+```
 
-sudo yum install httpd
-sudo yum install mysql mysql-server
-sudo yum install php56w php56w-xml php56w-xmlrpc php56w-soap php56w-gd
-
-sudo yum install php56w-mysqlnd
-
-== Create a new database to use == 
-
+# Create a new database to use
+```
 # mysqld start
-
-
 # mysql -u root
-
-- Create a new database called Garfield
+```
+### Create a new database called Garfield
+```
 mysql> CREATE DATABASE garfield;
+```
 
-create garfield user and password
-
-
+### create garfield user and password
+```
 mysql> CREATE USER 'garfield'@'localhost' IDENTIFIED BY 'garfield';
-
 mysql> GRANT ALL PRIVILEGES ON *.* to 'garfield'@'localhost';
+```
 
-== Install and start the client ==
-# service httpd start
+# Install and start the client
 
+```
+service httpd start
+```
 
 extract the gazor.zip file
 
@@ -48,8 +49,9 @@ browse to http://ip/install.php
 . most should be garfield
 
 - install.php should be removed automatically. if not:
+```
 # mv install.php install.php.bak
-
+```
 
 
 - check config.php to see if the variables have been updated and if not manually enter them.
