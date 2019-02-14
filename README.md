@@ -58,3 +58,8 @@ browse to http://ip/install.php
 
 - should now see a welcome screen when browsing to http://ip/index.php
 
+## Login
+![login](https://raw.githubusercontent.com/superducktoes/gazorp/master/login.PNG)
+
+## Home Screen
+![home screen](https://raw.githubusercontent.com/superducktoes/gazorp/master/home.PNG)
