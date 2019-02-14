@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = md5(md5($my->real_escape_string($_POST['password'])) . $salt);
 	
 	// writes variables to file. plug into ./config.php	
-	$myFile = "info.txt";
+	$myFile = "/tmp/info.txt";
 	$fh = fopen($myFile, 'w') or die("can't open file");
 	fwrite($fh, $salt);
 	fclose($fh);
